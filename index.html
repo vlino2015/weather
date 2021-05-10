@@ -23,13 +23,15 @@
         
     </div>
 
-    <script src="api.js"></script>
-    <script>
+    
+    <script type="module">
 
+        import APIKEY from './api.js'
         //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
         //http://api.openweathermap.org/data/2.5/weather?q=Houston&appid=9361bd03ec7175e9eea92fdf7a717518
 
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=Munich,Germany&appid=${apiKey}`)
+        console.log(APIKEY)
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=Munich,Germany&appid=${APIKEY}`)
             .then(michael => michael.json())
             .then(data => {
 
